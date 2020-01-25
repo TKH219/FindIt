@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1OK-J8-3NL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -7,20 +7,78 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--LoginViewController-->
+        <scene sceneID="Lgz-g7-9vM">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FindIt" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController storyboardIdentifier="LoginViewController" title="LoginViewController" id="1OK-J8-3NL" customClass="LoginViewController" customModule="FindIt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Gj-x8-pgG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="X4K-3Y-6LO">
+                                <rect key="frame" x="111" y="323" width="192.5" height="260"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaR-Kd-tTB" userLabel="LoginLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="192.5" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="AEw-Zi-PNc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your phone number" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4QD-WH-PKa">
+                                        <rect key="frame" x="0.0" y="55" width="192.5" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="TUk-Si-2qV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htP-7D-ltm" userLabel="PasswordLabel">
+                                        <rect key="frame" x="0.0" y="110" width="192.5" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KZs-ta-JEo">
+                                        <rect key="frame" x="0.0" y="165" width="192.5" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uq-q7-IEp" userLabel="LoginButton">
+                                        <rect key="frame" x="0.0" y="220" width="192.5" height="40"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="didTapLogin:" destination="1OK-J8-3NL" eventType="touchUpInside" id="jt3-8r-EfA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="KZs-ta-JEo" firstAttribute="height" secondItem="htP-7D-ltm" secondAttribute="height" id="NBY-KZ-aL6"/>
+                                    <constraint firstItem="5uq-q7-IEp" firstAttribute="height" secondItem="KZs-ta-JEo" secondAttribute="height" id="Na5-Hj-cLy"/>
+                                    <constraint firstItem="htP-7D-ltm" firstAttribute="height" secondItem="4QD-WH-PKa" secondAttribute="height" id="aF4-Pu-HIV"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="X4K-3Y-6LO" firstAttribute="centerX" secondItem="Ug8-Pj-BlN" secondAttribute="centerX" id="BNI-Z9-k2U"/>
+                            <constraint firstItem="X4K-3Y-6LO" firstAttribute="centerY" secondItem="Ug8-Pj-BlN" secondAttribute="centerY" id="Pvw-Fi-CdT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ug8-Pj-BlN"/>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="5uq-q7-IEp" id="jpW-4e-VCM"/>
+                        <outlet property="passwordLabel" destination="htP-7D-ltm" id="myV-tB-obv"/>
+                        <outlet property="passwordTextField" destination="KZs-ta-JEo" id="8OA-Fx-54m"/>
+                        <outlet property="phoneNumberLabel" destination="NaR-Kd-tTB" id="pvz-rw-LX9"/>
+                        <outlet property="phoneNumberTextField" destination="4QD-WH-PKa" id="uK2-TS-p62"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yi6-Pt-4tp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-426" y="94"/>
+            <point key="canvasLocation" x="-226" y="53"/>
         </scene>
     </scenes>
 </document>
